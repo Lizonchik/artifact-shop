@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Fontin-SmallCaps';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fontin-SmallCaps'),
+       url('./assets/fonts/Fontin-SmallCaps.ttf') format('truetype');
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  background-color: #0f0f0f;
+  margin: 0;
+}
+
+header {
+  margin: 0;
+  padding: 20px;
+  border-bottom: 1px solid #5e4f45;
+
+  > h1 {
+    color: #dfcf99;
+    text-align: center;
+    font-family: 'Fontin-SmallCaps', Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+}
+
+.artifacts-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.artifact-image {
+  height: 10em;
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #24272e;
+  }
+  
+  > img {
+    object-fit: contain;
+    max-width: 85%;
+    max-height: 85%;
+  }
+}
+

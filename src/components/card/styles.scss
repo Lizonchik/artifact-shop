@@ -1,0 +1,117 @@
+
+/* Stolen & modified CSS, hehe :D */
+/* Source: https://pathofexile.gamepedia.com/Greed%27s_Embrace */
+.infobox-page-container {
+  margin-right: 1em;
+  margin-bottom: 1em;
+  line-height: 1.5;
+  font-size: calc(0.75em + 0.75vw);
+  .header {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-bottom: 0.5em;
+  }
+}
+
+.item-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  min-width: 16em;
+  max-width: 16em;
+  text-align: center;
+  font-family: 'Fontin-SmallCaps', Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.05em;
+  font-weight: 400;
+  font-style: normal;
+  font-variant-ligatures: none;
+  color: #7f7f7f;
+  background-color: #000;
+
+  > .header {
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.15em;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    &.double {
+      padding: 3px 44px;
+      height: 52px;
+      width: 100%;
+      box-sizing: border-box;
+      line-height: 22px;
+      background-image: url('../../assets/images/Item-ui-header-double.png'),
+        url('../../assets/images/Item-ui-header-double.png'),
+        url('../../assets/images/Item-ui-header-double.png');
+    }
+  }
+  
+  &.unique {
+    border-color: #af6025;
+    box-shadow: 0 0 10px 2px #fda564;
+    > .header {
+      color: #af6025;
+      &.double {
+        background-position: left -162px,right -270px,center -216px;
+      }
+    }
+  }
+}
+
+.item-stats {
+  padding: 7px 12px;
+  margin: 0 auto;
+  > .group {
+    margin: 0 auto;
+  }
+}
+
+.text-color, .tc {
+  &.mod {
+    font-family: 'Fontin-SmallCaps', Verdana, Arial, Helvetica, sans-serif;
+    font-variant-ligatures: none;
+    color: #8888ff;
+  }
+  &.default {
+    color: rgb(127,127,127);
+  }
+  &.value {
+    color: #ffffff;
+  }
+  &.flavour {
+    color: #af6025;
+    font-style: italic;
+  }
+  a {
+    color: inherit !important;
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.item-box.-unique > .item-stats > .group::after, .item-stat-separator.-unique::before {
+  background-position: 0 -6px;
+}
+.item-stats > .group:nth-last-child(n+2)::after, .item-stat-separator::before {
+  display: block;
+  margin: 5px auto;
+  width: 221px;
+  height: 2px;
+  background-image: url('../../assets/images/Item-ui-separators.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.price {
+  color: #DFCF99;
+}
+/* Stolen CSS ends here */
