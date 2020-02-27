@@ -20,8 +20,8 @@ const CardWithStyleModule = ({ artifact }: IProps) => {
           <div className={styles['group']}>
             {artifact.attributes.map((a: IAttribute, i: number) => (
               <div key={`attr-${i}`}>
-                <span className={styles.default}>{a.name}:</span>
-                <span className={styles.value}>{a.value}:</span>
+                <span className={styles.default}>{a.name}:&nbsp;</span>
+                <span className={styles.value}>{a.value}</span>
               </div>
             ))}
           </div>
@@ -30,9 +30,10 @@ const CardWithStyleModule = ({ artifact }: IProps) => {
               <li key={`modifiers-${i}`}>{mod}</li>
             ))}
           </ul>
-          <div className={`${styles['group']} ${styles['tc']} ${styles['flavour']}`}>
-            {artifact.flavour_text}
-          </div>
+          <div className={`${styles['group']} ${styles['tc']} ${styles['flavour']}`}
+            dangerouslySetInnerHTML={{
+              __html: artifact.flavour_text
+            }} />
         </div>
         <div className="group">
           <span>Price:&nbsp;</span>

@@ -34,6 +34,11 @@ header {
   align-items: stretch;
   justify-content: center;
   margin-top: 2em;
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
 }
 
 .artifact-image {

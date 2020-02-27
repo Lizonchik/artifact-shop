@@ -15,8 +15,8 @@ const Card = ({ artifact }: IProps) => {
           <div className="group">
             {artifact.attributes.map((a: IAttribute, i: number) => (
               <div>
-                <span className="default">{a.name}:</span>
-                <span className="tc value">{a.value}:</span>
+                <span className="default">{a.name}:&nbsp;</span>
+                <span className="tc value">{a.value}</span>
               </div>
             ))}
           </div>
@@ -26,9 +26,9 @@ const Card = ({ artifact }: IProps) => {
               <li key={`modifiers-${i}`}>{mod}</li>
             ))}
           </ul>
-          <div className="group tc flavour">
-            {artifact.flavour_text}
-          </div>
+          <div className="group tc flavour" dangerouslySetInnerHTML={{
+            __html: artifact.flavour_text
+          }} />
         </div>
         <div className="group">
           <span>Price:&nbsp;</span>
